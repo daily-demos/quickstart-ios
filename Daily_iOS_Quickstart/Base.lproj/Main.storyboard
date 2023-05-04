@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKa-X0-gfv">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ALr-yT-5mH">
+            <objects>
+                <viewController id="PKa-X0-gfv" customClass="ViewController" customModule="Daily_iOS_Quickstart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NfH-x2-vbo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f89-wx-3XK">
+                                <rect key="frame" x="0.0" y="761.66666666666663" width="414" height="134.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wig-Ei-nz4">
+                                        <rect key="frame" x="314" y="24.333333333333371" width="60" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="19" weight="medium"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapLeaveRoom:" destination="PKa-X0-gfv" eventType="touchUpInside" id="eGq-da-Qko"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5N-za-E7g">
+                                        <rect key="frame" x="177" y="24.333333333333371" width="60" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <imageReference key="image" image="mic.fill" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="medium"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapToggleMicrophone:" destination="PKa-X0-gfv" eventType="touchUpInside" id="CoP-Hi-CbD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-Pr-Rs8">
+                                        <rect key="frame" x="45" y="24.333333333333371" width="60" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <imageReference key="image" image="video.fill" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="medium"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapToggleCamera:" destination="PKa-X0-gfv" eventType="touchUpInside" id="1Xp-bO-NGJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Qgk-Pr-Rs8" secondAttribute="bottom" constant="50.000000000000043" id="61Y-yf-sYE"/>
+                                    <constraint firstItem="F5N-za-E7g" firstAttribute="width" secondItem="f89-wx-3XK" secondAttribute="width" multiplier="0.144928" id="7Uz-rN-nxC"/>
+                                    <constraint firstAttribute="trailing" secondItem="wig-Ei-nz4" secondAttribute="trailing" constant="40" id="Gc8-Cd-fiW"/>
+                                    <constraint firstItem="wig-Ei-nz4" firstAttribute="width" secondItem="f89-wx-3XK" secondAttribute="width" multiplier="0.144928" id="Ijc-3s-Krt"/>
+                                    <constraint firstItem="Qgk-Pr-Rs8" firstAttribute="leading" secondItem="f89-wx-3XK" secondAttribute="leading" constant="45" id="Mzs-rC-0kz"/>
+                                    <constraint firstItem="wig-Ei-nz4" firstAttribute="height" secondItem="f89-wx-3XK" secondAttribute="height" multiplier="0.461538" constant="-2.0000000000000213" id="ZoR-kv-ief"/>
+                                    <constraint firstAttribute="bottom" secondItem="wig-Ei-nz4" secondAttribute="bottom" constant="50.000000000000043" id="kKi-OV-zcP"/>
+                                    <constraint firstItem="Qgk-Pr-Rs8" firstAttribute="height" secondItem="f89-wx-3XK" secondAttribute="height" multiplier="0.461538" constant="-2.0000000000000213" id="kRg-03-bDX"/>
+                                    <constraint firstItem="F5N-za-E7g" firstAttribute="centerX" secondItem="f89-wx-3XK" secondAttribute="centerX" id="mkc-Uw-5iY"/>
+                                    <constraint firstAttribute="bottom" secondItem="F5N-za-E7g" secondAttribute="bottom" constant="50.000000000000043" id="sJj-to-m2o"/>
+                                    <constraint firstItem="Qgk-Pr-Rs8" firstAttribute="width" secondItem="f89-wx-3XK" secondAttribute="width" multiplier="0.144928" id="tM0-lA-iex"/>
+                                    <constraint firstItem="F5N-za-E7g" firstAttribute="height" secondItem="f89-wx-3XK" secondAttribute="height" multiplier="0.461538" constant="-2.0000000000000213" id="vLa-oq-Edd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="APy-fU-ave">
+                                <rect key="frame" x="23" y="64" width="371" height="674"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Yh-5W-qf0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f89-wx-3XK" firstAttribute="height" secondItem="NfH-x2-vbo" secondAttribute="height" multiplier="0.15" id="LNW-i1-9TX"/>
+                            <constraint firstItem="3Yh-5W-qf0" firstAttribute="trailing" secondItem="f89-wx-3XK" secondAttribute="trailing" id="QPq-gT-Ue9"/>
+                            <constraint firstItem="APy-fU-ave" firstAttribute="top" secondItem="3Yh-5W-qf0" secondAttribute="top" constant="20" id="S3k-EH-asR"/>
+                            <constraint firstItem="f89-wx-3XK" firstAttribute="bottom" secondItem="NfH-x2-vbo" secondAttribute="bottom" id="V2X-tu-5Qz"/>
+                            <constraint firstItem="APy-fU-ave" firstAttribute="leading" secondItem="3Yh-5W-qf0" secondAttribute="leading" constant="23" id="lv2-1Z-5U3"/>
+                            <constraint firstItem="3Yh-5W-qf0" firstAttribute="bottom" secondItem="APy-fU-ave" secondAttribute="bottom" constant="124" id="pDu-Eo-dpU"/>
+                            <constraint firstItem="3Yh-5W-qf0" firstAttribute="trailing" secondItem="APy-fU-ave" secondAttribute="trailing" constant="20" id="x0J-VZ-z9e"/>
+                            <constraint firstItem="f89-wx-3XK" firstAttribute="leading" secondItem="3Yh-5W-qf0" secondAttribute="leading" id="zYs-lZ-k9H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraInputButton" destination="Qgk-Pr-Rs8" id="GTY-T1-gDy"/>
+                        <outlet property="leaveRoomButton" destination="wig-Ei-nz4" id="VAp-84-u42"/>
+                        <outlet property="microphoneInputButton" destination="F5N-za-E7g" id="KHr-At-bqo"/>
+                        <outlet property="participantsStack" destination="APy-fU-ave" id="P1d-ga-dah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAr-bq-sjO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2497.1014492753625" y="-34.151785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic.fill" catalog="system" width="110" height="128"/>
+        <image name="video.fill" catalog="system" width="128" height="81"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
