@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var videoViews: [ParticipantId: VideoView] = [:]
     
     //Room's URL
-    let roomURL: String = "[YOUR_DAILY_ROOM_URL]"
+    let roomURLString: String = "[YOUR_DAILY_ROOM_URL]"
     
     //BUTTONS
     @IBOutlet weak var cameraInputButton: UIButton!
@@ -56,11 +56,11 @@ class ViewController: UIViewController {
     
     private func enterRoom() {
         
-        guard let parsedRoomURL = URL(string: roomURL) else {
+        guard let roomURL = URL(string: roomURLString) else {
             return
         }
         // This call is where you'd add a meeting token to join a private room.
-        callClient.join(url: parsedRoomURL, token: nil) { result in
+        callClient.join(url: roomURL, token: nil) { result in
             
             print(result)
             // You can either handle the join event in a callback or in a delegate method
