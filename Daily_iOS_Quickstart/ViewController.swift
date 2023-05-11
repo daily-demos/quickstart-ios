@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         //Set call clients delegate
         self.callClient.delegate = self
         
+        self.updateControls()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,9 +117,6 @@ extension ViewController: CallClientDelegate {
         let videoView = self.videoViews[participant.id]
         self.participantsStack.addArrangedSubview(videoView!)
         
-        // Handle any necessary UI updates
-        self.updateControls()
-        
         // Update the layout of the view
         self.view.setNeedsLayout()
     }
@@ -158,7 +156,6 @@ extension ViewController: CallClientDelegate {
         
         //Handle UI updates
         self.updateControls()
-        
     }
     
 }
