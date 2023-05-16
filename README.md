@@ -1,3 +1,3 @@
-# Daily_iOS_Quickstart
+# Daily Client SDK for iOS Quickstart
 
-iOS Quickstart tutorial's app build
+This is a quickstart application for [Daily's Client SDK for iOS](https://docs.daily.co/reference/ios).
