@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		221F387E29C64D7B008B8A6B /* Daily_iOS_Quickstart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily_iOS_Quickstart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		221F387E29C64D7B008B8A6B /* DailyQuickstart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyQuickstart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		221F388129C64D7C008B8A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		221F388329C64D7C008B8A6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		221F388529C64D7C008B8A6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		221F387529C64D7B008B8A6B = {
 			isa = PBXGroup;
 			children = (
-				221F388029C64D7B008B8A6B /* Daily_iOS_Quickstart */,
+				221F388029C64D7B008B8A6B /* DailyQuickstart */,
 				221F387F29C64D7B008B8A6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		221F387F29C64D7B008B8A6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				221F387E29C64D7B008B8A6B /* Daily_iOS_Quickstart.app */,
+				221F387E29C64D7B008B8A6B /* DailyQuickstart.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		221F388029C64D7B008B8A6B /* Daily_iOS_Quickstart */ = {
+		221F388029C64D7B008B8A6B /* DailyQuickstart */ = {
 			isa = PBXGroup;
 			children = (
 				221F388129C64D7C008B8A6B /* AppDelegate.swift */,
@@ -66,15 +66,15 @@
 				221F388C29C64D7C008B8A6B /* LaunchScreen.storyboard */,
 				221F388F29C64D7C008B8A6B /* Info.plist */,
 			);
-			path = Daily_iOS_Quickstart;
+			path = DailyQuickstart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		221F387D29C64D7B008B8A6B /* Daily_iOS_Quickstart */ = {
+		221F387D29C64D7B008B8A6B /* DailyQuickstart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 221F389229C64D7C008B8A6B /* Build configuration list for PBXNativeTarget "Daily_iOS_Quickstart" */;
+			buildConfigurationList = 221F389229C64D7C008B8A6B /* Build configuration list for PBXNativeTarget "DailyQuickstart" */;
 			buildPhases = (
 				221F387A29C64D7B008B8A6B /* Sources */,
 				221F387B29C64D7B008B8A6B /* Frameworks */,
@@ -84,12 +84,12 @@
 			);
 			dependencies = (
 			);
-			name = Daily_iOS_Quickstart;
+			name = DailyQuickstart;
 			packageProductDependencies = (
 				2290157C29D0E40300EFF118 /* Daily */,
 			);
-			productName = Daily_iOS_Quickstart;
-			productReference = 221F387E29C64D7B008B8A6B /* Daily_iOS_Quickstart.app */;
+			productName = DailyQuickstart;
+			productReference = 221F387E29C64D7B008B8A6B /* DailyQuickstart.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 221F387929C64D7B008B8A6B /* Build configuration list for PBXProject "Daily_iOS_Quickstart" */;
+			buildConfigurationList = 221F387929C64D7B008B8A6B /* Build configuration list for PBXProject "DailyQuickstart" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				221F387D29C64D7B008B8A6B /* Daily_iOS_Quickstart */,
+				221F387D29C64D7B008B8A6B /* DailyQuickstart */,
 			);
 		};
 /* End PBXProject section */
@@ -297,7 +297,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9ARMKSND23;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Daily_iOS_Quickstart/Info.plist;
+				INFOPLIST_FILE = DailyQuickstart/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is necessary for transmitting video in a call";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is necessary for transmitting audio in a call";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -311,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aisultan.Daily-iOS-Quickstart";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aisultan.DailyQuickstart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -328,7 +328,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9ARMKSND23;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Daily_iOS_Quickstart/Info.plist;
+				INFOPLIST_FILE = DailyQuickstart/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is necessary for transmitting video in a call";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is necessary for transmitting audio in a call";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -342,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aisultan.Daily-iOS-Quickstart";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aisultan.DailyQuickstart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,7 +353,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		221F387929C64D7B008B8A6B /* Build configuration list for PBXProject "Daily_iOS_Quickstart" */ = {
+		221F387929C64D7B008B8A6B /* Build configuration list for PBXProject "DailyQuickstart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				221F389029C64D7C008B8A6B /* Debug */,
@@ -362,7 +362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		221F389229C64D7C008B8A6B /* Build configuration list for PBXNativeTarget "Daily_iOS_Quickstart" */ = {
+		221F389229C64D7C008B8A6B /* Build configuration list for PBXNativeTarget "DailyQuickstart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				221F389329C64D7C008B8A6B /* Debug */,

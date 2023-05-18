@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Daily_iOS_Quickstart
+//  DailyQuickstart
 //
 //  Created by Aisultan Askarov on 18.03.2023.
 //

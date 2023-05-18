@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="ALr-yT-5mH">
             <objects>
-                <viewController id="PKa-X0-gfv" customClass="ViewController" customModule="Daily_iOS_Quickstart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PKa-X0-gfv" customClass="ViewController" customModule="DailyQuickstart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NfH-x2-vbo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
