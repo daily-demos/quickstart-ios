@@ -41,6 +41,9 @@ final class ViewController: UIViewController {
         // Add the local participant's video view to the stack view
         self.participantsStack.addArrangedSubview(self.localVideoView)
 
+        // Disable the idle timer, so the screen will remain active while the app is in use
+        UIApplication.shared.isIdleTimerDisabled = true
+
         self.updateControls()
     }
 
