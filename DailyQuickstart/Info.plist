@@ -25,9 +25,5 @@
 	<array>
 		<string>voip</string>
 	</array>
-    <key>NSCameraUsageDescription</key>
-           <string>Camera is necessary for transmitting video in a call</string>
-           <key>NSMicrophoneUsageDescription</key>
-        <string>Microphone is necessary for transmitting audio in a call</string>
 </dict>
 </plist>
