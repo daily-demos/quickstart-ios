@@ -12,6 +12,9 @@ final class ViewController: UIViewController {
     // Create call client
     private let callClient: CallClient = .init()
 
+    // The local participant's video view
+    private let localVideoView: VideoView = .init()
+
     // Dictionary of video views
     private var videoViews: [ParticipantId: VideoView] = [:]
 
@@ -34,6 +37,9 @@ final class ViewController: UIViewController {
 
         // Set the call client's delegate
         self.callClient.delegate = self
+
+        // Add the local participant's video view to the stack view
+        self.participantsStack.addArrangedSubview(self.localVideoView)
 
         self.updateControls()
     }
@@ -126,8 +132,13 @@ extension ViewController: CallClientDelegate {
         let screenTrack = participant.media?.screenVideo.track
         let videoTrack = cameraTrack ?? screenTrack
 
-        // Update the track for a participants video view
-        self.videoViews[participant.id]?.track = videoTrack
+        if participant.info.isLocal {
+            // Update the track for the local participant's video view
+            self.localVideoView.track = videoTrack
+        } else {
+            // Update the track for a participants video view
+            self.videoViews[participant.id]?.track = videoTrack
+        }
     }
 
     // Handle a participant leaving
