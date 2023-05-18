@@ -2,16 +2,16 @@ import UIKit
 import Daily
 
 final class ViewController: UIViewController {
-    // Create call client
+    // The client used to manage the video call.
     private let callClient: CallClient = .init()
 
-    // The local participant's video view
+    // The local participant video view.
     private let localVideoView: VideoView = .init()
 
-    // Dictionary of video views
+    // A dictionary of remote participant video views.
     private var videoViews: [ParticipantId: VideoView] = [:]
 
-    // Room's URL
+    // The URL for the room to join.
     private let roomURLString: String = "[YOUR_DAILY_ROOM_URL]"
 
     // MARK: - Buttons
@@ -22,39 +22,41 @@ final class ViewController: UIViewController {
 
     // MARK: -
 
-    // Participant views
+    // A container stack view for participant video views.
     @IBOutlet private weak var participantsStack: UIStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Set the call client's delegate
+        // Set the call client's delegate.
         self.callClient.delegate = self
 
-        // Add the local participant's video view to the stack view
+        // Add the local participant's video view to the stack view.
         self.participantsStack.addArrangedSubview(self.localVideoView)
 
-        // Disable the idle timer, so the screen will remain active while the app is in use
+        // Disable the idle timer, so the screen will remain active while the app is in use.
         UIApplication.shared.isIdleTimerDisabled = true
 
+        // Handle UI updates.
         self.updateControls()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        // Automatically join the room specified by `roomURLString` when this view controller appears.
         self.enterRoom()
     }
 
-    // Update the UI according to the input's(e.g camera off/on)
+    // Updates the UI according to the inputs (e.g camera off/on).
     private func updateControls() {
-        // Camera Button
+        // Set the image for the camera button.
         cameraInputButton.setImage(
             UIImage(systemName: callClient.inputs.camera.isEnabled ? "video.fill": "video.slash.fill"),
             for: .normal
         )
 
-        // Mic Button
+        // Set the image for the mic button.
         microphoneInputButton.setImage(
             UIImage(systemName: callClient.inputs.microphone.isEnabled ? "mic.fill": "mic.slash.fill"),
             for: .normal
@@ -66,24 +68,24 @@ final class ViewController: UIViewController {
             return
         }
 
-        // This call is where you'd add a meeting token to join a private room.
+        // This call is where you would add a meeting token to join a private room.
         callClient.join(url: roomURL, token: nil) { result in
             print(result)
 
-            // You can either handle the join event in a callback or in a delegate method
+            // You can either handle the join event in a callback or in a delegate method.
         }
     }
 
     // MARK: - Button Actions
 
     @IBAction func didTapToggleCamera(_ sender: Any) {
-        // Dissable & Enable your camera
+        // Disable or enable the camera.
         let isEnabled = self.callClient.inputs.camera.isEnabled
         self.callClient.setInputEnabled(.camera, !isEnabled)
     }
 
     @IBAction func didTapToggleMicrophone(_ sender: Any) {
-        // Dissable & Enable your microphone
+        // Disable or Enable the microphone.
         let isEnabled = self.callClient.inputs.microphone.isEnabled
         self.callClient.setInputEnabled(.microphone, !isEnabled)
     }
@@ -95,62 +97,61 @@ final class ViewController: UIViewController {
 
 // MARK: - CallClientDelegate
 
-// Event listener delegate
 extension ViewController: CallClientDelegate {
-    // Handle a remote participant joining
+    // Handles a remote participant joining.
     func callClient(_ callClient: CallClient, participantJoined participant: Participant) {
-        print("Participant \(participant.id) joined the call")
+        print("Participant \(participant.id) joined the call.")
 
-        // Create a new view for the participant's video feed
+        // Create a new view for this participant's video track.
         let videoView = VideoView()
         
-        // Determine whether the video input is from the camera or screen
+        // Determine whether the video input is from the camera or screen.
         let cameraTrack = participant.media?.camera.track
         let screenTrack = participant.media?.screenVideo.track
         let videoTrack = screenTrack ?? cameraTrack
         
-        // Set the track for the participant's video view
+        // Set the track for this participant's video view.
         videoView.track = videoTrack
         
-        // Add the new participant to the video views dictionary
+        // Add this participant's video view to the dictionary.
         self.videoViews[participant.id] = videoView
         
-        // Add the participant's video view to the stack view
+        // Add this participant's video view to the stack view.
         self.participantsStack.addArrangedSubview(videoView)
     }
 
-    // Handle a participant updating (e.g. their tracks changing)
+    // Handles a participant updating (e.g. their tracks changing).
     func callClient(_ callClient: CallClient, participantUpdated participant: Participant) {
-        print("Participant \(participant.id) Updated")
+        print("Participant \(participant.id) updated.")
 
-        // Determine whether the video input is screen or camera
+        // Determine whether the video track is for a screen or camera.
         let cameraTrack = participant.media?.camera.track
         let screenTrack = participant.media?.screenVideo.track
         let videoTrack = cameraTrack ?? screenTrack
 
         if participant.info.isLocal {
-            // Update the track for the local participant's video view
+            // Update the track for the local participant's video view.
             self.localVideoView.track = videoTrack
         } else {
-            // Update the track for a participants video view
+            // Update the track for a remote participant's video view.
             self.videoViews[participant.id]?.track = videoTrack
         }
     }
 
-    // Handle a participant leaving
+    // Handles a participant leaving.
     func callClient(_ callClient: CallClient, participantLeft participant: Participant, withReason reason: ParticipantLeftReason) {
-        print("Participant \(participant.id) Left The Room")
+        print("Participant \(participant.id) left the room.")
 
-        // Remove participant's value from the dictionary and video view from the stack
+        // Remove remote participant's video view from the dictionary and stack view.
         if let videoView = self.videoViews.removeValue(forKey: participant.id) {
            self.participantsStack.removeArrangedSubview(videoView)
         }
     }
 
     func callClient(_ callClient: CallClient, inputsUpdated inputs: InputSettings) {
-        print("Inputs Updated")
+        print("Inputs updated.")
 
-        // Handle UI updates
+        // Handle UI updates.
         self.updateControls()
     }
 }
