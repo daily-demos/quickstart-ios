@@ -115,9 +115,6 @@ extension ViewController: CallClientDelegate {
         
         // Add the participant's video view to the stack view
         self.participantsStack.addArrangedSubview(videoView)
-
-        // Update the layout of the view
-        self.view.setNeedsLayout()
     }
 
     // Handle a participant updating (e.g. their tracks changing)
@@ -131,8 +128,6 @@ extension ViewController: CallClientDelegate {
 
         // Update the track for a participants video view
         self.videoViews[participant.id]?.track = videoTrack
-
-        self.view.setNeedsLayout()
     }
 
     // Handle a participant leaving
