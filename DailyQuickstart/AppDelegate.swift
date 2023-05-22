@@ -1,23 +1,13 @@
-//
-//  AppDelegate.swift
-//  Daily_iOS_Quickstart
-//
-//  Created by Aisultan Askarov on 18.03.2023.
-//
-
 import UIKit
 import Daily
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
+        // Configure the log level.
+        // Values of `debug` or `trace` can be used to obtain more information.
         Daily.setLogLevel(.warn)
-        
+
         return true
     }
 
@@ -34,7 +24,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-
